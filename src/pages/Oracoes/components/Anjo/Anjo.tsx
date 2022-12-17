@@ -1,55 +1,34 @@
 import React from 'react'
-import { Box, Heading, Text } from '@ems-ignite/react'
+import { Box } from '@ems-ignite/react'
+import Oracao from '../Oracao'
+
+const anjoDeFatima = {
+  lt: [
+    'O mi Iesu,',
+    'dimitte nobis debita nostra,',
+    'libera nos ab igne inferni,',
+    'conduc in cælum omnes animas,',
+    'præsertim illas quæ maxime',
+    'indigent misericordia tua.',
+  ],
+  pt: [
+    'Oh meu Jesus,',
+    'perdoai-nos as nossas dividas,',
+    'livrai-nos do inferno.',
+    'Levai as almas todas para o céu.',
+    'E socorrei principalmente as que mais',
+    'precisarem da vossa infinita misericórdia.',
+  ],
+}
 
 const Anjo = () => {
   return (
     <Box className='flex' css={{ border: 'none', paddingInline: 0 }}>
-      <Box>
-        <Heading as='h2' size='md' css={{ marginBottom: '1rem' }}>
-          Latim:
-        </Heading>
-        <Text as='p' size='sm'>
-          O mi Iesu,
-        </Text>
-        <Text as='p' size='sm'>
-          dimitte nobis debita nostra,
-        </Text>
-        <Text as='p' size='sm'>
-          libera nos ab igne inferni,
-        </Text>
-        <Text as='p' size='sm'>
-          conduc in cælum omnes animas,
-        </Text>
-        <Text as='p' size='sm'>
-          præsertim illas quæ maxime
-        </Text>
-        <Text as='p' size='sm'>
-          indigent misericordia tua.
-        </Text>
-      </Box>
-      <Box>
-        <Heading as='h2' size='md' css={{ marginBottom: '1rem' }}>
-          Português:
-        </Heading>
-        <Text as='p' size='sm'>
-          Oh meu Jesus,
-        </Text>
-        <Text as='p' size='sm'>
-          perdoai-nos as nossas dividas,
-        </Text>
-        <Text as='p' size='sm'>
-          livrai-nos do inferno.
-        </Text>
-        <Text as='p' size='sm'>
-          Levai as almas todas para o céu.
-        </Text>
-        <Text as='p' size='sm'>
-          E socorrei principalmente as que mais
-        </Text>
-        <Text as='p' size='sm'>
-          precisarem da vossa infinita misericórdia.
-        </Text>
-      </Box>
+      {Object.entries(anjoDeFatima).map(([lang, prayer]) => (
+        <Box key={lang}>
+          <Oracao prayer={prayer} isLatim={lang === 'lt'} />
+        </Box>
+      ))}
     </Box>
   )
 }
