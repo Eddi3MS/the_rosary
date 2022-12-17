@@ -1,0 +1,6 @@
+export { default as Credo } from './Credo'
+export { default as PaterNoster } from './PaterNoster'
+export { default as AveMaria } from './AveMaria'
+export { default as Gloria } from './Gloria'
+export { default as Anjo } from './Anjo'
+export { default as SalveRainha } from './SalveRainha'
