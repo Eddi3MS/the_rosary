@@ -4,4 +4,4 @@ App simples que exibe os mistérios à serem contemplados no terço diário e al
 
 Português | Latim
 
-[live](https://pray-the-rosary.netlify.app/)
+acessar o [site](https://pray-the-rosary.netlify.app/)
